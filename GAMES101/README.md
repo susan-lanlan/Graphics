@@ -1,3 +1,4 @@
+# GAMES 101
 # assignment 1
 ![image](https://user-images.githubusercontent.com/47129648/217989317-559a3741-3848-439d-a007-9211c59c933b.jpg)
 
@@ -14,9 +15,6 @@
 
 
 # assignment 5
-# before msaa
-![binary](https://user-images.githubusercontent.com/47129648/217990051-05816a15-df17-47af-9a2e-d36c402ed45a.png)
-# after msaa
 ![binary_msaa](https://user-images.githubusercontent.com/47129648/217990021-b49bbc28-0fdc-4ddb-bba8-897e99f18465.png)
 
 # assignment 6
