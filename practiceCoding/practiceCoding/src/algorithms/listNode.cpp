@@ -1,0 +1,68 @@
+#include<iostream>
+
+using namespace std;
+
+struct LinkedNode {
+	int val;
+	LinkedNode* next;
+	LinkedNode(int v) : val(v), next(nullptr) {}
+};
+
+class MyLinkedList {
+public:
+	MyLinkedList() {
+		_dummyHead = new LinkedNode(0);
+		_size = 0;
+	}
+	int get(int index) {
+		if(index < 0 || (index > _size - 1))
+			return -1;
+		LinkedNode* cur = _dummyHead->next;
+		while (index--) {
+			cur = cur->next;
+		}
+		return cur->val;
+	}
+	void addAtTail(int v) {
+		LinkedNode* cur = _dummyHead;
+		while (cur->next != nullptr)
+			cur = cur->next;
+		LinkedNode* n = new LinkedNode(v);
+		cur->next = n;
+		_size++;
+	}
+	void addAtHead(int v) {
+		LinkedNode* n = new LinkedNode(v);
+		n->next = _dummyHead->next;
+		_dummyHead->next = n;
+		_size++;
+	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+	void print() {
+		LinkedNode* cur = _dummyHead->next;
+		while(cur != nullptr && cur->next != nullptr) {
+			cout << cur->val<<"->";
+			cur = cur->next;
+		}
+		cout << cur->val << endl;
+	}
+private:
+	int _size;
+	LinkedNode* _dummyHead; 
+};
+
+int main()
+{
+	/*MyLinkedList* my = new MyLinkedList();
+	my->addAtTail(1);
+	my->addAtTail(2);
+	my->addAtTail(3);
+	my->addAtHead(1);
+	my->addAtHead(2);
+	my->addAtHead(3);
+	my->print();
+	int v = my->get(2);
+	cout << "val:" << v << endl;*/
+	int n = 5;
+	while (n--)
+		cout << n << endl;
+}

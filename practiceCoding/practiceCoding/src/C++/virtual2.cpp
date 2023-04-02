@@ -5,6 +5,9 @@ class Base {
 public:
     Base() {}
     virtual void fun() { cout << "Base" << endl; }
+    virtual ~Base() {
+        cout << "delete base" << endl;
+    }
 };
 
 class D :public Base
@@ -14,11 +17,14 @@ public:
     void fun() { cout << "D" << endl; }
 
     int val;
+    ~D() {
+        cout << "delete D" << endl;
+    }
 };
 
 int main()
 {
-    D d;
+    /*D d;
     Base* base1 = &d;
     Base base2 = d;
     Base& base3 = d;
@@ -31,7 +37,9 @@ int main()
     d.fun();
     base1->fun();
     base2.fun();
-    base3.fun();
-   
+    base3.fun();*/
+
+    Base* b = new D();
+    delete b;
     return 0;
 }
